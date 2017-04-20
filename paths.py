@@ -1,7 +1,7 @@
 import os
 
-DATA_DIR = '/home/sdemyanov/synapse/UniversalGAN/data/mnist'
-RESULTS_DIR = '/home/sdemyanov/synapse/UniversalGAN/results/mnist'
+DATA_DIR = '/home/rlouie/repos/Theano-Tutorials/mnist'
+RESULTS_DIR = '/home/rlouie/repos/Theano-Tutorials/mnist_results'
 
 #DATA_DIR = '/home/ge/Project/ICCV2017/lib/UniversalGAN/data/mnist'
 #RESULTS_DIR = '/home/ge/Project/ICCV2017/lib/UniversalGAN/results/mnist'

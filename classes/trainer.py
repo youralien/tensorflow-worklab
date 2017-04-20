@@ -39,7 +39,7 @@ class Trainer(object):
         self._cross_entropy, self._total_loss = self._classifier.losses(self._input['labels'])
         self._lr_placeholder = tf.placeholder(tf.float32)
         self._train = self._train_op()
-        self._all_summaries = tf.merge_all_summaries()
+        self._all_summaries = tf.summary.merge_all()
 
     self.results_dir = params['results_dir']
     print('Trainer model folder: %s' %self.results_dir)
@@ -52,7 +52,7 @@ class Trainer(object):
 
 
   def _train_op(self):
-    tf.scalar_summary('learning_rate', self._lr_placeholder)
+    tf.summary.scalar('learning_rate', self._lr_placeholder)
     with tf.variable_scope('train_operation'):
       opt = tf.train.GradientDescentOptimizer(self._lr_placeholder)
       #opt = tf.train.MomentumOptimizer(self._lr_placeholder, Trainer.MOMENTUM)

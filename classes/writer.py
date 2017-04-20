@@ -24,7 +24,7 @@ class Writer(object):
     print('Writer summary folder: %s' %self._path)
     if not tf.gfile.Exists(self._path):
       tf.gfile.MakeDirs(self._path)
-    self._writer = tf.train.SummaryWriter(self._path)
+    self._writer = tf.summary.FileWriter(self._path)
 
 
   def write_graph(self, graph):

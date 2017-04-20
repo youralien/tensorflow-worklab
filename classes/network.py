@@ -307,7 +307,7 @@ class Network(object):
     # labels must be already tf.int64
     with tf.variable_scope('cross_entropy_losses/' + self._prefix):
       return tf.nn.sparse_softmax_cross_entropy_with_logits(
-        self._output, labels, name='cross_entropy_per_example'
+        logits=self._output, labels=labels, name='cross_entropy_per_example'
       )
 
 
